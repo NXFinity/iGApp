@@ -7,42 +7,42 @@
 <h1 align="center">iGApp — Beamify Frontend</h1>
 <p align="center">
   <strong>The visual interface of the Beamify Network</strong><br/>
-  A cross-platform Angular 19 application built for Web, Desktop (Electron), and Mobile (Cordova).
+  A high-performance Next.js 15 application for Web, Desktop (Electron), and Mobile (Capacitor).
 </p>
 
 ---
 
 ## 🎨 What is iGApp?
 
-**iGApp** is the official frontend for the Beamify Network — a high-performance, Angular 19-powered application designed to deliver a unified creative experience across devices.
+**iGApp** is the official frontend for the Beamify Network — a modern, universal app built with **Next.js 15**. Designed for speed, flexibility, and seamless cross-platform experiences, iGApp empowers creators through an elegant interface for all things Beamify.
 
-Running on Web, Electron, and Cordova, iGApp serves as the primary interface for interacting with **iGCore**, Beamify’s enterprise-grade backend, and seamlessly integrates with our modular services, including real-time chat, gamification, and dynamic city visualization.
+Powered by React Server Components and App Router, iGApp interfaces directly with **iGCore**, Beamify’s enterprise-grade backend, and connects with our ecosystem — including encrypted chat, gamified services, and a living city visualization.
 
 ---
 
 ## 🚀 Key Features
 
-- 🧩 **Cross-Platform Ready** – Deploy to Web, Electron (desktop), and Cordova (mobile)
-- ⚡ **Angular 19** – Modern, fast, and powerful framework with signal-based reactivity
-- 🔗 **Tightly Integrated with iGCore** – Interfaces directly with Beamify’s backend API
-- 🎮 **Gamified UI** – Live points, rewards, and interactive elements tied to user activity
-- 💬 **Chat-Ready** – Built to integrate with Beamify’s standalone encrypted messaging platform
-- 🌆 **Live Visualization Hooks** – Real-time metrics drive UI components and animations
-- 🔐 **Secure Routing & Auth** – Route guards, token validation, and modular permission layers
-- 💡 **Responsive UX** – Built with accessibility and fluid user interaction in mind
+- 🌍 **Cross-Platform Support** – Web-first design with Electron (Desktop) and Capacitor (Mobile)
+- ⚛️ **Next.js 15** – Latest App Router, Server Actions, and React Server Components
+- 🔗 **iGCore Integration** – Direct connection to Beamify’s secure backend APIs
+- 🏆 **Gamification Engine** – Real-time rewards, user progression, and interactive UI
+- 💬 **Nexus Chat Integration** – Seamless plug-in with Beamify’s encrypted messaging layer
+- 🌆 **Live City Visualization** – Dynamic visuals driven by real-time backend metrics
+- 🔐 **Secure Auth & Routing** – Role-based guards, session tokens, and SSR protection
+- 💡 **Accessible UX** – Fast, fluid, and user-focused experience across all devices
 
 ---
 
 ## 🧬 Technologies Used
 
-- **Angular 19** – Signal-powered modern reactive framework
-- **RxJS** – Reactive state management and streams
-- **Electron** – Desktop application support
-- **Cordova** – Native mobile app compatibility
-- **SCSS / TailwindCSS** – Custom styling and theming
-- **Angular Material** – Optional component UI toolkit
-- **JWT Auth** – Route-based access with token protection
+- **Next.js 15** – React Server Components, App Router, Server Actions
+- **React** – Core rendering and interactivity
+- **TailwindCSS / SCSS** – Custom styling and theme control
+- **Electron** – Cross-platform desktop builds
+- **Capacitor** – Native mobile support
+- **JWT / Session Auth** – Secure user authentication
 - **iGCore API** – Full backend connectivity
+- **Zod / TRPC (Optional)** – Validation and typed backend interaction
 
 ---
 
@@ -50,14 +50,15 @@ Running on Web, Electron, and Cordova, iGApp serves as the primary interface for
 
 ```bash
 src/
-├── app/
-│   ├── core/             # App-wide services, interceptors, guards
-│   ├── modules/          # Feature-based modules
-│   ├── shared/           # Common components, directives, pipes
-│   └── app.component.ts  # Root component logic
-├── assets/               # Icons, logos, and static files
-├── environments/         # Environment-specific configs
-└── index.html            # Main HTML shell
+├── app/                 # App Router pages, layouts, and routes
+│   ├── (auth)/          # Auth routes and guards
+│   ├── dashboard/       # Main user area
+│   └── layout.tsx       # Global layout file
+├── components/          # Reusable UI components
+├── lib/                 # Utility functions and services
+├── styles/              # Global SCSS or Tailwind config
+├── public/              # Static files (e.g. icons, assets)
+└── middleware.ts        # Route-level protection logic
 ```
 
 ---
@@ -68,20 +69,23 @@ src/
 # Install dependencies
 npm install
 
-# Run in browser (Dev)
-ng serve
+# Run in development
+npm run dev
 
 # Build for production
-ng build
+npm run build
+
+# Start production server
+npm run start
 
 # Electron build
 npm run electron:build
 
-# Cordova mobile build
-npm run cordova:build
+# Capacitor mobile build
+npm run capacitor:build
 ```
 
-> Ensure environment variables and iGCore API URLs are set in `environment.ts`.
+> Ensure your `.env.local` contains valid API keys and iGCore URLs.
 
 ---
 
@@ -89,10 +93,10 @@ npm run cordova:build
 
 ```bash
 # Unit tests
-ng test
+npm run test
 
-# End-to-end tests
-ng e2e
+# End-to-end tests (e.g. with Playwright)
+npm run test:e2e
 ```
 
 ---
@@ -107,4 +111,4 @@ This project is licensed under the **MIT License**.
 
 - 🧠 [iGCore — Beamify API](https://github.com/NXFinity/iGCore)
 - 💬 [Beamify Chat](https://github.com/NXFinity/iGChat)
-- 🏙 [Beamify Website](https://beamify.online)  
+- 🏙 [Beamify Website](https://beamify.online)
